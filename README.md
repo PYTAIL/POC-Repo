@@ -5,6 +5,4 @@ Test Repository
 
 * PR Test Two
 
-* PR Test Three - six three four
-
-
+* PR Test Three - seven oh five
