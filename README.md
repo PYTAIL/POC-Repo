@@ -5,4 +5,4 @@ Test Repository
 
 * PR Test Two
 
-* Master trigger
+* Master trigger - Shell test
