@@ -7,5 +7,5 @@ Test Repository
 
 * Master trigger - Forked PR Test
 
-* pr-trigger
+* pr-trigger - PR3
 
