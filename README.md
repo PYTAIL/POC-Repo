@@ -1,4 +1,4 @@
 # POC-Repo
 Test Repository
 
-* Commit trigger
+* Commit trigger testing
