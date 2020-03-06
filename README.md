@@ -2,3 +2,5 @@
 Test Repository
 
 * Commit trigger testing
+* Pull request followed by merge
+
