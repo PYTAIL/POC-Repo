@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Report') { 
             steps { 
-                bash '''#!/bin/bash
+                sh '''#!/bin/bash
                     echo "Triggered! Beginning run." 
                     sleep 10
                 '''
@@ -11,21 +11,21 @@ pipeline {
         }
         stage('List'){
             steps {
-                bash '''#!/bin/bash
+                sh '''#!/bin/bash
                     ls -lia
                 '''
             }
         }
         stage('REAME'){
             steps {
-                bash '''#!/bin/bash
+                sh '''#!/bin/bash
                     cat README.md
                 '''
             }
         }
         stage('Result') {
             steps {
-                bash '''#!/bin/bash
+                sh '''#!/bin/bash
                     echo "COMPLETE" 
                     sleep 10
                 '''
