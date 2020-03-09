@@ -1,0 +1,35 @@
+pipeline { 
+    agent any 
+    stages {
+        stage('Report') { 
+            steps { 
+                bash '''#!/bin/bash
+                    echo "Triggered! Beginning run." 
+                    sleep 10
+                '''
+            }
+        }
+        stage('List'){
+            steps {
+                bash '''#!/bin/bash
+                    ls -lia
+                '''
+            }
+        }
+        stage('REAME'){
+            steps {
+                bash '''#!/bin/bash
+                    cat README.md
+                '''
+            }
+        }
+        stage('Result') {
+            steps {
+                bash '''#!/bin/bash
+                    echo "COMPLETE" 
+                    sleep 10
+                '''
+            }
+        }
+    }
+}
