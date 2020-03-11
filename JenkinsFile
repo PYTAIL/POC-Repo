@@ -6,7 +6,7 @@ pipeline {
                 sh '''#!/bin/bash
                     echo "Triggered! Beginning run." 
                     sleep 10
-                    tar -zcvf poc_repo.tgz *
+                    tar -cvf poc_repo.tgz *
                     ls -lia
                 '''
             }
