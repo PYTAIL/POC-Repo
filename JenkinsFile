@@ -23,10 +23,12 @@ pipeline {
                 '''
             }
         }
-        stage('Result') {
+        stage('Archive') {
             steps {
                 sh '''#!/bin/bash
-                    echo "COMPLETE" 
+                    tar -zcvf poc_repo.tgz *
+                    # archiveArtifacts artifacts: 'poc_repo.tgz', excludes: 'output/*.md'
+                    archiveArtifacts artifacts: 'poc_repo.tgz'
                     sleep 10
                 '''
             }
