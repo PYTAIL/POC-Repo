@@ -10,10 +10,12 @@ pipeline {
                     ls -lia
                 '''
             }
+        }
+        stage('Execute2') { 
             steps {
                 build 'GateJob'	//this is where we specify which job to invoke.
             }            
-        }
+        }        
     }
     
     post {
