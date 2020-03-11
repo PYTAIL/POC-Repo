@@ -6,7 +6,7 @@ pipeline {
                 sh '''#!/bin/bash
                     echo "Triggered! Beginning run." 
                     sleep 10
-                    tar -zcvf repo.tgz *
+                    tar -zcvf poc_repo.tgz *
                     ls -lia
                 '''
             }
@@ -15,7 +15,7 @@ pipeline {
     
     post {
         always {
-            archiveArtifacts artifacts: 'build/**/*', fingerprint: true
+            archiveArtifacts artifacts: 'poc_repo.tgz', fingerprint: true
         }
     }    
 }
