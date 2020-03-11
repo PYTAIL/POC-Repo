@@ -27,7 +27,7 @@ pipeline {
             steps {
                 sh '''#!/bin/bash
                     tar -zcvf poc_repo.tgz *
-                    # archiveArtifacts artifacts: 'poc_repo.tgz', excludes: 'output/*.md'
+                    ls -liat
                     archiveArtifacts artifacts: 'poc_repo.tgz'
                     sleep 10
                 '''
