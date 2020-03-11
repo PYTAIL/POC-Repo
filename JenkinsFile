@@ -28,9 +28,9 @@ pipeline {
                 sh '''#!/bin/bash
                     tar -zcvf poc_repo.tgz *
                     ls -liat
-                    archiveArtifacts: 'poc_repo.tgz'
                     sleep 10
                 '''
+                archiveArtifacts: 'poc_repo.tgz'
             }
         }
     }
