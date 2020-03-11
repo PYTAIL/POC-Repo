@@ -33,7 +33,7 @@ pipeline {
                     pwd
                     sleep 10
                 '''
-                archiveArtifacts: 'poc_repo.tgz'
+                
             }
         }
     }
