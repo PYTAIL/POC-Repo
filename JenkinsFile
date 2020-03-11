@@ -27,7 +27,10 @@ pipeline {
             steps {
                 sh '''#!/bin/bash
                     tar -zcvf poc_repo.tgz *
+                    echo "========"
                     ls -liat
+                    echo "========"
+                    pwd
                     sleep 10
                 '''
                 archiveArtifacts: 'poc_repo.tgz'
