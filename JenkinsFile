@@ -10,6 +10,9 @@ pipeline {
                     ls -lia
                 '''
             }
+            steps {
+                build 'GateJob'	//this is where we specify which job to invoke.
+            }            
         }
     }
     
@@ -18,13 +21,4 @@ pipeline {
             archiveArtifacts artifacts: 'poc_repo.tar', fingerprint: true
         }
     } 
-    
-    agent { label 'master' }
-    stages {
-        stage ("downstream") {		//an arbitrary stage name
-            steps {
-                build 'GateJob'	//this is where we specify which job to invoke.
-            }
-        }
-    }
 }
