@@ -17,7 +17,7 @@ pipeline {
                 script {
                     build(job: "GateJob",
                         parameters:
-                        [string(name: 'Path', value: "$WORKSPACE/output/poc_repo.tar")])
+                        [string(name: 'ARCHIVEPATH', value: "$WORKSPACE/output/poc_repo.tar")])
                 }            
             
                 // build 'GateJob'	//this is where we specify which job to invoke.
