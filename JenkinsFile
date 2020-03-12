@@ -4,6 +4,7 @@ pipeline {
         stage('Execute') { 
             steps { 
                 sh '''#!/bin/bash
+                    rm output/poc_repo.tar
                     mkdir -p output
                     tar -cvf output/poc_repo.tar *
                     ls -lia
