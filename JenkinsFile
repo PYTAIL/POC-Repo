@@ -14,8 +14,14 @@ pipeline {
         }
         stage('Execute2') { 
             steps {
-                build 'GateJob'	//this is where we specify which job to invoke.
-                parameters: string(name: 'Path', value: "$WORKSPACE/output/poc_repo.tar")
+                script {
+                    build(job: "GateJob",
+                        parameters:
+                        [string(name: 'Path', value: "$WORKSPACE/output/poc_repo.tar")])
+                }            
+            
+                // build 'GateJob'	//this is where we specify which job to invoke.
+                // parameters: string(name: 'Path', value: "$WORKSPACE/output/poc_repo.tar")
                 // [string(name: 'Path', value: "$WORKSPACE/output/poc_repo.tar")]
             }            
         }        
