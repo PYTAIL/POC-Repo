@@ -5,8 +5,9 @@ pipeline {
             steps { 
                 sh '''#!/bin/bash
                     echo "Triggered! Beginning run." 
-                    sleep 10
-                    tar -cvf poc_repo.tar *
+                    # sleep 10
+                    mkdir -p output
+                    tar -cvf output/poc_repo.tar *
                     ls -lia
                 '''
             }
