@@ -4,8 +4,6 @@ pipeline {
         stage('Execute') { 
             steps { 
                 sh '''#!/bin/bash
-                    echo "Triggered! Beginning run." 
-                    # sleep 10
                     mkdir -p output
                     tar -cvf output/poc_repo.tar *
                     ls -lia
@@ -27,9 +25,9 @@ pipeline {
         }        
     }
     
-    post {
-        always {
-            archiveArtifacts artifacts: 'output/poc_repo.tar', fingerprint: true
-        }
-    } 
+    // post {
+    //     always {
+    //         archiveArtifacts artifacts: 'output/poc_repo.tar', fingerprint: true
+    //     }
+    // }
 }
