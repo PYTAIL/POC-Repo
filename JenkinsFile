@@ -9,42 +9,12 @@ pipeline {
                 sh '''#!/bin/bash
                     python3 -m venv scenario
                     source scenario/bin/activate
-                    # pip install yamllint
-                    # pip install flake8
                     oc version
                     which yamllint
                     which flake8
-                    
                     oc projects
-
-                    #if [[ -f output/poc_repo.tar ]]; then
-                    #    rm output/poc_repo.tar
-                    #fi
-
-                    #mkdir -p output
-                    #tar -cvf output/poc_repo.tar *
-                    #ls -lia
                 '''
             }
         }
-        //stage('Execute2') { 
-        //    steps {
-        //        script {
-        //            build(job: "GateJob",
-        //                parameters:
-        //                [string(name: 'ARCHIVEPATH', value: "$WORKSPACE/output/poc_repo.tar")])
-        //        }            
-        //    
-        //        // build 'GateJob'	//this is where we specify which job to invoke.
-        //        // parameters: string(name: 'Path', value: "$WORKSPACE/output/poc_repo.tar")
-        //        // [string(name: 'Path', value: "$WORKSPACE/output/poc_repo.tar")]
-        //    }            
-        //}        
     }
-    
-    // post {
-    //     always {
-    //         archiveArtifacts artifacts: 'output/poc_repo.tar', fingerprint: true
-    //     }
-    // }
 }
