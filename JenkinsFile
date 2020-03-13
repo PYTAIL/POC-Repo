@@ -6,8 +6,8 @@ pipeline {
                 sh '''#!/bin/bash
                     python3 -m venv scenario
                     source scenario/bin/activate
-                    pip install yamllint
-                    pip install flake8
+                    // pip install yamllint
+                    // pip install flake8
                     oc version
 
                     //if [[ -f output/poc_repo.tar ]]; then
