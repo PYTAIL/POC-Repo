@@ -9,7 +9,11 @@ pipeline {
                 sh '''#!/bin/bash
                     python3 -m venv scenario
                     source scenario/bin/activate
+                    echo "=== current dir ==="
                     pwd
+                    echo "=== content ==="
+                    ls -l
+                    echo "==============="
                     pip install --exists-action i yamllint
                     pip install --exists-action i flake8
                     # pip install --exists-action i pytest
