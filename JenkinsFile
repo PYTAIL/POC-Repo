@@ -1,16 +1,25 @@
 pipeline { 
     agent { label 'master' }
     stages {
-        stage('Execute') { 
-            steps { 
+        stage('Setup') {
+            steps {
                 sh '''#!/bin/bash
+                    pip install yamllint
+                    pip install flake8
+                    pip install ansible-lint
+                    pip install ansible
+
+                    if [[ -f output/poc_repo.tar ]]; then
+                        rm output/poc_repo.tar
+                    fi
+
                     mkdir -p output
                     tar -cvf output/poc_repo.tar *
                     ls -lia
                 '''
             }
         }
-        stage('Execute2') { 
+        stage('ExecuteGateJob') {
             steps {
                 script {
                     build(job: "GateJob",
