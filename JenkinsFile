@@ -9,9 +9,12 @@ pipeline {
                 sh '''#!/bin/bash
                     python3 -m venv scenario
                     source scenario/bin/activate
+                    pip install --exists-action ignore yamllint
+                    pip install --exists-action ignore flake8
                     oc version
                     which yamllint
                     which flake8
+                    which pytest
                     oc projects
                 '''
             }
