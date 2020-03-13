@@ -1,5 +1,8 @@
 pipeline { 
     agent { label 'master' }
+    environment {
+        KUBECONFIG = credentials('a700aafc-b29c-4052-a8f8-c93863709f25')
+    }    
     stages {
         stage('Execute') { 
             steps { 
@@ -11,6 +14,8 @@ pipeline {
                     oc version
                     which yamllint
                     which flake8
+                    
+                    oc projects
 
                     #if [[ -f output/poc_repo.tar ]]; then
                     #    rm output/poc_repo.tar
