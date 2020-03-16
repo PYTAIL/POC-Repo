@@ -16,7 +16,7 @@ pipeline {
                     echo "==============="
                     pip install --exists-action i yamllint
                     pip install --exists-action i flake8
-                    # pip install --exists-action i pytest
+                    pip install --exists-action i pytest
                     pip install .
                     oc version
                     which yamllint
