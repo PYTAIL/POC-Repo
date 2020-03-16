@@ -32,7 +32,7 @@ pipeline {
                 sh '''#!/bin/bash
                     # ls -lia
                     source scenario/bin/activate
-                    find . -name \*.py | grep -v 'doc' | xargs -i flake8 {}  --show-source --max-line-length=120
+                    find . -name *.py | grep -v 'doc' | xargs -i flake8 {}  --show-source --max-line-length=120
                 '''
             }
         }         
