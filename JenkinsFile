@@ -46,6 +46,14 @@ pipeline {
                     pytest -sv poc_repo/tests/services/test_ocp_projects.py
                 '''
             }
-        }        
+        }
+        stage('Cleanup') { 
+            steps { 
+                sh '''#!/bin/bash
+                    # ls -lia
+                    rm -rf scenario
+                '''
+            }
+        }          
     }
 }
