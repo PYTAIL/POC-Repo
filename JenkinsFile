@@ -31,7 +31,7 @@ pipeline {
                 sh '''#!/bin/bash
                     ls -lia
                     # pushd poc_repo
-                    pytest -sv poc_repo/tests/services/test_ocp_projects.py
+                    python -m pytest -sv poc_repo/tests/services/test_ocp_projects.py
                 '''
             }
         }        
