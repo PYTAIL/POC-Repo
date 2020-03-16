@@ -7,7 +7,7 @@ pipeline {
         stage('Setup') { 
             steps { 
                 sh '''#!/bin/bash -ex
-                    # Remove me after testing
+                    # Remove me after testing pull request
                     python3 -m venv scenario
                     source scenario/bin/activate
                     pip install --exists-action i yamllint
