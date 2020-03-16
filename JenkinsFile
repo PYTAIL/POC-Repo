@@ -9,28 +9,17 @@ pipeline {
                 sh '''#!/bin/bash -ex
                     python3 -m venv scenario
                     source scenario/bin/activate
-                    # echo "=== current dir ==="
-                    # pwd
-                    # echo "=== content ==="
-                    # ls -l
-                    # echo "==============="
                     pip install --exists-action i yamllint
                     pip install --exists-action i flake8
                     pip install --exists-action i pytest
                     pip install .
                     oc version
-                    # which yamllint
-                    # which flake8
-                    # which pytest
-                    # oc projects
-                    # python -m pytest -sv poc_repo/tests/services/test_ocp_projects.py
                 '''
             }
         }
         stage('Flake8') { 
             steps { 
                 sh '''#!/bin/bash -ex
-                    # ls -lia
                     source scenario/bin/activate
                     find . -name *.py | grep -v 'doc' | xargs -i flake8 {}  --show-source --max-line-length=120
                 '''
@@ -39,10 +28,7 @@ pipeline {
         stage('Pytest') { 
             steps { 
                 sh '''#!/bin/bash -ex
-                    # ls -lia
                     source scenario/bin/activate
-                    which pytest
-                    # pushd poc_repo
                     pytest -sv poc_repo/tests/services/test_ocp_projects.py
                 '''
             }
@@ -50,7 +36,6 @@ pipeline {
         stage('Cleanup') { 
             steps { 
                 sh '''#!/bin/bash -ex
-                    # ls -lia
                     rm -rf scenario
                 '''
             }
