@@ -29,8 +29,9 @@ pipeline {
         stage('Execute') { 
             steps { 
                 sh '''#!/bin/bash
+                    ls -lia
                     pushd poc_repo
-                    pytest -sv poc_repo/tests/services/test_ocp_projects.py
+                    # pytest -sv poc_repo/tests/services/test_ocp_projects.py
                 '''
             }
         }        
