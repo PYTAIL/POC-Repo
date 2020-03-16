@@ -31,6 +31,8 @@ pipeline {
             steps { 
                 sh '''#!/bin/bash
                     ls -lia
+                    source scenario/bin/activate
+                    which pytest
                     # pushd poc_repo
                     # python -m pytest -sv poc_repo/tests/services/test_ocp_projects.py
                 '''
