@@ -2,10 +2,10 @@ pipeline {
     agent { label 'master' }
     environment {
         KUBECONFIG = credentials('a700aafc-b29c-4052-a8f8-c93863709f25')
-    }    
+    }
     stages {
-        stage('Setup') { 
-            steps { 
+        stage('Setup') {
+            steps {
                 sh '''#!/bin/bash
                     python3 -m venv scenario
                     source scenario/bin/activate
@@ -26,13 +26,13 @@ pipeline {
                 '''
             }
         }
-        stage('Execute') { 
-            steps { 
+        stage('Execute') {
+            steps {
                 sh '''#!/bin/bash
                     pushd poc_repo
                     pytest -sv poc_repo/tests/services/test_ocp_projects.py
                 '''
             }
-        }        
+        }
     }
 }
