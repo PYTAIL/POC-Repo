@@ -195,3 +195,17 @@ class TestOcpProjects(object):
         project_api_obj.delete_a_project(project_name=project_name)
         is_deleted_project_present = project_api_obj.does_project_exist(project_name)
         assert is_deleted_project_present is False
+
+    def test_does_project_exist2(self, setup_params):
+        """
+        1. Create a project and validate that does_project_exist returns True.
+        2. Delete the project and validate that does_project_exist returns False.
+        :param setup_params:
+        :return:
+        """
+        project_api_obj = setup_params['project_api_obj']
+
+        project_name = setup_params['project1']['name']
+        project_api_obj.delete_a_project(project_name=project_name)
+        is_created_project_present = project_api_obj.does_project_exist(project_name)
+        assert is_created_project_present is True
