@@ -2,8 +2,8 @@ import logging
 import pytest
 import random
 from time import sleep
-from poc_repo.api.services import OcpProjects
-from poc_repo.api.services.ocp_operators import OperatorhubPackages, CatalogSourceConfig, \
+from poc_repo.api.resources import OcpProjects
+from poc_repo.api.resources.ocp_operators import OperatorhubPackages, CatalogSourceConfig, \
     Subscription, OperatorSource, OperatorGroup, ClusterServiceVersion
 from poc_repo.api.tasks.operator_ops import OperatorInstaller
 from poc_repo import __loggername__

@@ -1,6 +1,6 @@
 import logging
 import pytest
-from poc_repo.api.services.ocp_service_accounts import OcpServiceAccount
+from poc_repo.api.resources.ocp_service_accounts import OcpServiceAccount
 from poc_repo import __loggername__
 
 logger = logging.getLogger(__loggername__)

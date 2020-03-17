@@ -1,5 +1,5 @@
-from poc_repo.api.services import OcpBase, OcpProjects
-from poc_repo.api.services.ocp_operators import OperatorhubPackages, CatalogSourceConfig, \
+from poc_repo.api.resources import OcpBase, OcpProjects
+from poc_repo.api.resources.ocp_operators import OperatorhubPackages, CatalogSourceConfig, \
     Subscription, CatalogSource, OperatorSource, OperatorGroup
 from poc_repo.api.ocp_exceptions import OcpUnsupportedVersion
 from kubernetes.client.rest import ApiException

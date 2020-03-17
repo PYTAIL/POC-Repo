@@ -1,4 +1,4 @@
-from poc_repo.api.services import OcpProjects
+from poc_repo.api.resources import OcpProjects
 import pytest
 import logging
 from poc_repo import __loggername__
