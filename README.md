@@ -3,6 +3,6 @@ Test Repository
 
 * Commit trigger testing
 * Testing Jenkins pipelines
-* Rebase
+* Rebase collision testing
 
 
