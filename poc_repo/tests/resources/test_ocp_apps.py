@@ -1,5 +1,5 @@
 # from lib.ocpmgmt import ocp_apps, ocp_projects, ocp_templates, ocp_base
-from poc_repo.api.services import OcpApps, OcpProjects, OcpTemplates, OcpBase
+from poc_repo.api.resources import OcpApps, OcpProjects, OcpTemplates, OcpBase
 import pytest
 import json
 from openshift.dynamic.client import ResourceInstance
@@ -38,7 +38,7 @@ class TestOcpApps(object):
         project_api_obj = setup_params['project_api_obj']
         template_api_obj = setup_params['template_api_obj']
         project_api_obj.create_a_project(setup_params['test_project'])
-        with open('poc_repo/tests/services/templates/httpd.json') as t:
+        with open('poc_repo/tests/resources/templates/httpd.json') as t:
             body = json.load(t)
         template_api_obj.create_a_template_in_a_namespace(body, project=setup_params['test_project'])
 

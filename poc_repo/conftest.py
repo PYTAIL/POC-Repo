@@ -4,7 +4,7 @@ Setting pytest config files to be used by test fixtures defined under the test d
 import os
 from datetime import datetime
 import pytest
-from poc_repo.lib.logger.piqe_api_logger import piqe_api_logger
+from poc_repo.piqe_api_logger import piqe_api_logger
 from glusto.core import Glusto as g
 from poc_repo import __loggername__
 

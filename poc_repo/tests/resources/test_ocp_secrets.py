@@ -1,7 +1,7 @@
 import logging
 import random
 import pytest
-from poc_repo.api.services.ocp_secrets import OcpSecret
+from poc_repo.api.resources.ocp_secrets import OcpSecret
 from poc_repo import __loggername__
 
 logger = logging.getLogger(__loggername__)

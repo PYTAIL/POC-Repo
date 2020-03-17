@@ -1,4 +1,4 @@
-from poc_repo.api.services.ocp_base import OcpBase
+from poc_repo.api.resources.ocp_base import OcpBase
 from kubernetes.client.rest import ApiException
 import logging
 from poc_repo import __loggername__

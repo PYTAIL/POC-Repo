@@ -1,4 +1,4 @@
-from poc_repo.api.services import OcpBase
+from poc_repo.api.resources import OcpBase
 from kubernetes import client
 from kubernetes.client.rest import ApiException
 from kubernetes.stream import stream

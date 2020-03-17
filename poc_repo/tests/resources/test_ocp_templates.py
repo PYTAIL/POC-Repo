@@ -1,4 +1,4 @@
-from poc_repo.api.services import OcpProjects, OcpTemplates
+from poc_repo.api.resources import OcpProjects, OcpTemplates
 from pprint import pprint
 import pytest
 import json
@@ -31,7 +31,7 @@ class TestOcpTemplates(object):
         project_api_obj = setup_params['project_api_obj']
         project_api_obj.create_a_project(setup_params['test_project'])
         template_api_obj = setup_params['template_api_obj']
-        with open('poc_repo/tests/services/templates/httpd.json') as t:
+        with open('poc_repo/tests/resources/templates/httpd.json') as t:
             body = json.load(t)
         api_response = template_api_obj.create_a_template_in_a_namespace(body, project=setup_params['test_project'])
         pprint(api_response)

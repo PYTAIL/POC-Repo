@@ -1,4 +1,4 @@
-from poc_repo.api.services import OcpBase
+from poc_repo.api.resources import OcpBase
 from openshift.dynamic import DynamicClient
 import logging
 from poc_repo import __loggername__
