@@ -1,0 +1,3 @@
+Used for Jenkins trigger testing
+
+1. Direct commit to master
