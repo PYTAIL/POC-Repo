@@ -1,3 +1,5 @@
 Used for Jenkins trigger testing
 
-1. Direct commit to master
+1. Direct commit to master - Webhook - Okay
+2. Pull Request from master - Webhook
+
