@@ -24,7 +24,7 @@ Change directory to POC_Repo and create a virtual environment.
 
     python3 -m venv scenario
 
-Enter the virtual envirnoment, export the environment variables and performn a pip install.
+Enter the virtual environment, export the environment variables and performn a pip install.
 
     source scenario/bin/activate  
     export WORKSPACE=$PWD  
