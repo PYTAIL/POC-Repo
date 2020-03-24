@@ -30,6 +30,7 @@ pipeline {
             steps { 
                 sh '''#!/bin/bash -ex
                     source scenario/bin/activate
+                    export PATH=$PATH:/usr/local/bin/kubectl
                     pytest -sv poc_repo/tests/resources/test_ocp_nodes.py
                 '''
             }
