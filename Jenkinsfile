@@ -30,7 +30,7 @@ pipeline {
             steps { 
                 sh '''#!/bin/bash -ex
                     source scenario/bin/activate
-                    pytest -sv poc_repo/tests/resources/test_ocp_projects.py
+                    pytest -sv poc_repo/tests/resources/test_ocp_nodes.py
                 '''
             }
         }
