@@ -2,6 +2,7 @@ pipeline {
     agent { label 'master' }
     environment {
         KUBECONFIG = credentials('a700aafc-b29c-4052-a8f8-c93863709f25')
+        PATH = "PATH:/usr/local/bin"
     }    
     stages {
         stage('Setup') { 
@@ -30,7 +31,7 @@ pipeline {
             steps { 
                 sh '''#!/bin/bash -ex
                     source scenario/bin/activate
-                    export PATH=$PATH:/usr/local/bin/kubectl
+                    # export PATH=$PATH:/usr/local/bin/kubectl
                     ls -l /usr/local/bin
                     pytest -sv poc_repo/tests/resources/test_ocp_nodes.py
                 '''
