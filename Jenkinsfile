@@ -2,7 +2,7 @@ pipeline {
     agent { label 'master' }
     environment {
         KUBECONFIG = credentials('a700aafc-b29c-4052-a8f8-c93863709f25')
-        PATH = "PATH:/usr/local/bin"
+        PATH = "/usr/local/bin:$PATH"
     }    
     stages {
         stage('Setup') { 
