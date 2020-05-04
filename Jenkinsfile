@@ -33,7 +33,8 @@ pipeline {
                     source scenario/bin/activate
                     # export PATH=$PATH:/usr/local/bin/kubectl
                     ls -l /usr/local/bin
-                    pytest -sv poc_repo/tests/resources/test_ocp_nodes.py
+                    # MPQEENABLE-403 - Patch 1 disable pytest.
+                    # pytest -sv poc_repo/tests/resources/test_ocp_nodes.py
                 '''
             }
         }
