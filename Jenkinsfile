@@ -34,7 +34,7 @@ pipeline {
                     # export PATH=$PATH:/usr/local/bin/kubectl
                     ls -l /usr/local/bin
                     # MPQEENABLE-403a - Patch 1 - Git log improvements
-                    # Patch 3
+                    # 403a Patch 2 - Replaced comment 403 Patch 3
                     #  Need to document this in Confluence.
                     # Test Patch 2
                     # pytest -sv poc_repo/tests/resources/test_ocp_nodes.py
