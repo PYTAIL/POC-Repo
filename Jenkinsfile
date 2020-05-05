@@ -35,9 +35,10 @@ pipeline {
                     ls -l /usr/local/bin
                     # MPQEENABLE-403a - Patch 1 - Git log improvements
                     # 403a Patch 2 - Replaced comment 403 Patch 3
+                    # 403a Patch 3 - Restore PyTest
                     #  Need to document this in Confluence.
                     # Test Patch 2
-                    # pytest -sv poc_repo/tests/resources/test_ocp_nodes.py
+                    pytest -sv poc_repo/tests/resources/test_ocp_projects.py
                 '''
             }
         }
