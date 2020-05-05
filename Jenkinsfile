@@ -33,7 +33,7 @@ pipeline {
                     source scenario/bin/activate
                     # export PATH=$PATH:/usr/local/bin/kubectl
                     ls -l /usr/local/bin
-                    pytest -sv poc_repo/tests/resources/test_ocp_nodes.py
+                    # pytest -sv poc_repo/tests/resources/test_ocp_nodes.py
                 '''
             }
         }
