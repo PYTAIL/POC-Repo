@@ -33,6 +33,8 @@ pipeline {
                     source scenario/bin/activate
                     # export PATH=$PATH:/usr/local/bin/kubectl
                     ls -l /usr/local/bin
+                    # Patch 3
+                    #  Need to document this in Confluence.
                     # Test Patch 2
                     # pytest -sv poc_repo/tests/resources/test_ocp_nodes.py
                 '''
